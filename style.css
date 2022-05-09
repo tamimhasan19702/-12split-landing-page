@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #333;
+    
+
+}
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split.left{
+    left: 0;
+    background: url(./7eaf4cedc399726fd13149d8840def31.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.split.left::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(61, 180, 236, 0.549);
+}
+    
+.split.right{
+    right: 0;
+    background: url(./b90ad58f-9950-44a7-87fa-1ee8f0b6a90e.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.split.right::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(16, 16, 16, 0.384);
+}
+
+h2{
+    color: #fff;
+    font-size: 3.5rem;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    
+}
+
+button{
+    position: absolute;
+    background-color: transparent;
+    border: #fff solid 0.1rem;
+    width: 10rem;
+    height: 3rem;
+    top:45%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.left-btn:hover{
+    background-color: rgba(61, 180, 236, 0.549);
+    transition: background-color 0.5s ease;
+   border: none;
+}
+
+.right-btn:hover{
+    background-color: rgb(66, 211, 98);
+    transition: background-color 0.5s ease;
+    border: none;
+
+}
+
+.hover-left .left{
+    width: 75%;
+    transition: width 0.5s ease-in-out;
+}
+
+.hover-left .right{
+    width: 25%;
+    transition: width 0.5s ease-in-out;
+}
+
+.hover-right .right{
+    width: 75%;
+    transition: width 0.5s ease-in-out;
+}
+
+.hover-right .left{
+    width: 25%;
+    transition: width 0.5s ease-in-out;
+}
+
+@media (max-width: 800px){
+    h2{
+        font-size: 2rem;
+        top: 30%;
+    }
+    button{
+        width: 12rem;
+    }
+}
